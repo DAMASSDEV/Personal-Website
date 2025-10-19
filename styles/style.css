@@ -1,0 +1,1113 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #5bbcff;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+.container {
+  border: 4px solid #000;
+  box-shadow: 5px 5px 0 #000;
+  border-radius: 20px;
+  margin: 60px 80px;
+  background-color: #fff6e9;
+}
+
+@font-face {
+  font-family: "Futura";
+  src: url("../Assets/font/Futura Display.ttf");
+}
+
+#navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+  background-color: #fff6e9;
+  border-radius: 20px 20px 0 0;
+}
+
+.logo {
+  width: 280px;
+  height: auto;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-item {
+  font-size: 30px;
+  text-decoration: none;
+  color: #000;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-family: "Futura", sans-serif;
+}
+
+.nav-item:hover {
+  transform: scale(1.1);
+  color: #5bbcff;
+}
+
+/* Burger Menu */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+  z-index: 101;
+}
+
+.burger-menu span {
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+  border-radius: 2px;
+}
+
+.burger-menu.active span:nth-child(1) {
+  transform: rotate(45deg) translate(8px, 8px);
+}
+
+.burger-menu.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger-menu.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(8px, -8px);
+}
+
+#hero {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 80px 50px;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.left-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.image-damas {
+  width: 360px;
+  height: 440px;
+  border-radius: 20px;
+  object-fit: cover;
+  max-width: 100%;
+}
+
+.icon-hero {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-icon {
+  width: 38px;
+  height: 38px;
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.text-hero {
+  max-width: 500px;
+}
+
+.title-hero {
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.4;
+  margin-bottom: 20px;
+}
+
+.p-hero {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #333;
+}
+
+#skills {
+  padding: 100px 50px;
+  text-align: center;
+}
+
+.title-skills {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  font-family: "Futura", sans-serif;
+}
+
+.grid-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper-skills {
+  border: 4px solid #000;
+  border-radius: 30px;
+  background-color: #5bbcff;
+  box-shadow: 12px 12px 0 #000;
+  overflow: hidden;
+  transition: all 0.4s ease;
+}
+
+.wrapper-skills:hover {
+  transform: translateY(-10px);
+  background-color: #ce734c;
+}
+
+.img-skills {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.skill-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.h-skills {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 15px 0 10px;
+}
+
+.p-skills {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+}
+
+#project {
+  padding: 100px 50px;
+  text-align: center;
+}
+
+.title-project {
+  font-size: 56px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  font-family: "Futura", sans-serif;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.wrapper-project {
+  border-radius: 30px;
+  border: 4px solid #000;
+  background-color: #8ccaf7;
+  display: flex;
+  box-shadow: 12px 12px 0 #000;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  min-height: 400px;
+}
+
+.wrapper-project:hover {
+  transform: scale(1.02);
+}
+
+.wrapper-project.reverse {
+  flex-direction: row-reverse;
+}
+
+.project-image {
+  width: 50%;
+  height: 100%;
+  min-height: 400px;
+  object-fit: cover;
+}
+
+.project-content {
+  width: 50%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
+.h-project {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.p-project {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.btn-project {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  border-radius: 30px;
+  background-color: #309ff2;
+  box-shadow: 5px 5px 0 #79c6ff;
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  align-self: flex-start;
+  font-size: 18px;
+}
+
+.btn-project:hover {
+  transform: scale(1.05);
+  background-color: #ce734c;
+}
+
+#about {
+  padding: 200px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.love-img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.about-card {
+  border: 4px solid #000;
+  border-radius: 30px;
+  background-color: #8ccaf7;
+  padding: 50px;
+  box-shadow: 12px 12px 0 #000;
+  max-width: 600px;
+  width: 100%;
+}
+
+.h-about {
+  font-size: 54px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  font-family: "Futura", sans-serif;
+}
+
+.p-about {
+  font-size: 21px;
+  line-height: 1.6;
+}
+
+#pricing {
+  padding: 100px 50px;
+  text-align: center;
+}
+
+#pricing h2 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 60px;
+  font-family: "Futura", sans-serif;
+}
+
+.pricing-container {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing-plan {
+  flex: 1;
+  min-width: 280px;
+  max-width: 380px;
+  background-color: #f2f2f2;
+  border: 4px solid #000;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 10px 10px 0 #000;
+  transition: transform 0.3s ease;
+}
+
+.pricing-plan:hover {
+  transform: translateY(-10px);
+}
+
+.plan-header {
+  padding: 30px 20px;
+  color: #000;
+}
+
+.plan-header.basic {
+  background-color: #59d5e0;
+}
+
+.plan-header.standard {
+  background-color: #ffb4c2;
+}
+
+.plan-header.premium {
+  background-color: #9bec00;
+}
+
+.plan-title {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 30px 20px;
+  text-align: left;
+}
+
+.plan-features li {
+  margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.plan-button {
+  width: calc(100% - 40px);
+  margin: 0 20px 30px;
+  padding: 15px;
+  border: none;
+  border-radius: 20px;
+  font-weight: 700;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.plan-button.basic-btn {
+  background-color: #59d5e0;
+}
+
+.plan-button.standard-btn {
+  background-color: #ffb4c2;
+}
+
+.plan-button.premium-btn {
+  background-color: #9bec00;
+}
+
+.plan-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+#contact {
+  padding: 200px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.contact-card {
+  border: 4px solid #000;
+  border-radius: 30px;
+  background-color: #8ccaf7;
+  padding: 50px;
+  box-shadow: 12px 12px 0 #000;
+  text-align: center;
+  max-width: 700px;
+  width: 100%;
+}
+
+.h-contact {
+  font-size: 50px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  font-family: "Futura", sans-serif;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 15px;
+}
+
+.icon-contact {
+  width: 50px;
+  height: 50px;
+  flex-shrink: 0;
+}
+
+.p-contact {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+  word-break: break-word;
+}
+
+#button {
+  display: flex;
+  justify-content: center;
+  margin: 200px auto;
+  padding: 0 20px;
+}
+
+button {
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 28px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.go-todo {
+  color: white;
+  text-decoration: none;
+  font-size: 40px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+  display: inline-block;
+}
+
+.go-todo:hover {
+  color: #fff;
+}
+
+/* Tablet (768px - 1024px) */
+@media (max-width: 1024px) {
+  .container {
+    margin: 40px 40px;
+  }
+
+  #hero {
+    padding: 60px 30px;
+  }
+
+  .title-hero {
+    font-size: 32px;
+  }
+
+  .p-hero {
+    font-size: 18px;
+  }
+
+  #skills,
+  #project,
+  #pricing {
+    padding: 80px 30px;
+  }
+
+  .title-skills,
+  .title-project,
+  #pricing h2 {
+    font-size: 48px;
+  }
+
+  #about,
+  #contact {
+    padding: 150px 30px;
+  }
+
+  #button {
+    margin: 150px auto;
+  }
+}
+
+/* Mobile (481px - 768px) */
+@media (max-width: 768px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .container {
+    margin: 20px;
+    border-radius: 15px;
+  }
+
+  /* Navbar Mobile */
+  #navbar {
+    padding: 15px 20px;
+  }
+
+  .logo {
+    width: 150px;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  .nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background-color: #fff6e9;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: right 0.3s ease;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    border-left: 4px solid #000;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .nav-item {
+    font-size: 24px;
+  }
+
+  /* Hero Mobile */
+  #hero {
+    padding: 40px 20px;
+    flex-direction: column;
+  }
+
+  .image-damas {
+    width: 100%;
+    max-width: 300px;
+    height: 360px;
+  }
+
+  .title-hero {
+    font-size: 28px;
+  }
+
+  .p-hero {
+    font-size: 16px;
+  }
+
+  /* Skills Mobile */
+  #skills,
+  #project,
+  #pricing {
+    padding: 60px 20px;
+  }
+
+  #about,
+  #contact {
+    padding: 80px 20px;
+  }
+
+  .title-skills,
+  .title-project,
+  #pricing h2 {
+    font-size: 36px;
+  }
+
+  .grid-skills {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  /* Project Mobile */
+  .wrapper-project {
+    flex-direction: column !important;
+    box-shadow: 8px 8px 0 #000;
+    min-height: auto;
+  }
+
+  .wrapper-project.reverse {
+    flex-direction: column !important;
+  }
+
+  .project-image {
+    width: 100%;
+    min-height: 250px;
+  }
+
+  .project-content {
+    width: 100%;
+    padding: 25px;
+  }
+
+  .h-project {
+    font-size: 22px;
+  }
+
+  .p-project {
+    font-size: 14px;
+  }
+
+  /* About Mobile */
+  #about {
+    flex-direction: column;
+  }
+
+  .love-img {
+    max-width: 100%;
+  }
+
+  .about-card {
+    padding: 30px 20px;
+  }
+
+  .h-about {
+    font-size: 36px;
+  }
+
+  .p-about {
+    font-size: 18px;
+  }
+
+  /* Pricing Mobile */
+  .pricing-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pricing-plan {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  /* Contact Mobile */
+  .h-contact {
+    font-size: 36px;
+  }
+
+  .contact-card {
+    padding: 30px 20px;
+  }
+
+  .contact-item {
+    flex-direction: row;
+    gap: 15px;
+    padding: 12px;
+  }
+
+  .icon-contact {
+    width: 40px;
+    height: 40px;
+  }
+
+  .p-contact {
+    font-size: 16px;
+  }
+
+  #button {
+    margin: 100px auto;
+  }
+
+  .go-todo {
+    font-size: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    margin: 10px;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0 #000;
+  }
+
+  #navbar {
+    padding: 12px 15px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .nav {
+    width: 80%;
+  }
+
+  .nav-item {
+    font-size: 20px;
+  }
+
+  .image-damas {
+    max-width: 260px;
+    height: 320px;
+  }
+
+  .title-hero {
+    font-size: 24px;
+  }
+
+  .p-hero {
+    font-size: 14px;
+  }
+
+  .title-skills,
+  .title-project,
+  #pricing h2 {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .h-about,
+  .h-contact {
+    font-size: 32px;
+  }
+
+  .p-about {
+    font-size: 16px;
+  }
+
+  .about-card,
+  .contact-card {
+    padding: 25px 15px;
+    box-shadow: 8px 8px 0 #000;
+  }
+
+  .plan-title {
+    font-size: 32px;
+  }
+
+  .plan-price {
+    font-size: 20px;
+  }
+
+  .plan-features li {
+    font-size: 14px;
+  }
+
+  .plan-button {
+    font-size: 16px;
+    padding: 12px;
+  }
+
+  .contact-item {
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .p-contact {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .icon-contact {
+    width: 36px;
+    height: 36px;
+  }
+
+  .go-todo {
+    font-size: 28px;
+  }
+
+  button {
+    padding: 10px 22px;
+  }
+
+  #button {
+    margin: 80px auto;
+  }
+
+  .wrapper-skills {
+    box-shadow: 8px 8px 0 #000;
+  }
+
+  .wrapper-project {
+    box-shadow: 6px 6px 0 #000;
+  }
+
+  .project-content {
+    padding: 20px 15px;
+  }
+
+  .h-project {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    margin: 5px;
+    border: 3px solid #000;
+    box-shadow: 3px 3px 0 #000;
+    border-radius: 12px;
+  }
+
+  #navbar {
+    padding: 10px 12px;
+  }
+
+  .logo {
+    width: 100px;
+  }
+
+  .burger-menu span {
+    width: 25px;
+  }
+
+  .nav {
+    width: 85%;
+  }
+
+  .nav-item {
+    font-size: 18px;
+  }
+
+  #hero {
+    padding: 30px 15px;
+  }
+
+  .image-damas {
+    max-width: 240px;
+    height: 300px;
+  }
+
+  .social-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .title-hero {
+    font-size: 22px;
+  }
+
+  .p-hero {
+    font-size: 13px;
+  }
+
+  #skills,
+  #project,
+  #pricing {
+    padding: 50px 15px;
+  }
+
+  #about,
+  #contact {
+    padding: 60px 15px;
+  }
+
+  .title-skills,
+  .title-project,
+  #pricing h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .wrapper-skills {
+    border: 3px solid #000;
+    box-shadow: 6px 6px 0 #000;
+  }
+
+  .img-skills {
+    height: 160px;
+  }
+
+  .skill-content {
+    padding: 15px;
+  }
+
+  .h-skills {
+    font-size: 20px;
+  }
+
+  .p-skills {
+    font-size: 14px;
+  }
+
+  .wrapper-project {
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0 #000;
+    border-radius: 20px;
+  }
+
+  .project-image {
+    min-height: 200px;
+  }
+
+  .project-content {
+    padding: 15px;
+  }
+
+  .h-project {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .p-project {
+    font-size: 13px;
+    margin-bottom: 15px;
+  }
+
+  .btn-project {
+    font-size: 14px;
+    padding: 10px 18px;
+  }
+
+  .about-card,
+  .contact-card {
+    padding: 20px 12px;
+    border: 3px solid #000;
+    box-shadow: 6px 6px 0 #000;
+  }
+
+  .h-about,
+  .h-contact {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  .p-about {
+    font-size: 15px;
+  }
+
+  .love-img {
+    max-width: 90%;
+  }
+
+  .pricing-plan {
+    border: 3px solid #000;
+    box-shadow: 6px 6px 0 #000;
+    min-width: 100%;
+  }
+
+  .plan-title {
+    font-size: 28px;
+  }
+
+  .plan-price {
+    font-size: 18px;
+  }
+
+  .plan-features {
+    padding: 20px 15px;
+  }
+
+  .plan-features li {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+
+  .plan-button {
+    font-size: 15px;
+    padding: 12px;
+    margin: 0 15px 20px;
+    width: calc(100% - 30px);
+  }
+
+  .contact-info {
+    gap: 20px;
+  }
+
+  .contact-item {
+    padding: 8px;
+  }
+
+  .icon-contact {
+    width: 32px;
+    height: 32px;
+  }
+
+  .p-contact {
+    font-size: 13px;
+  }
+
+  #button {
+    margin: 60px auto;
+    padding: 0 10px;
+  }
+
+  button {
+    padding: 8px 18px;
+  }
+
+  .go-todo {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 320px) {
+  .container {
+    margin: 3px;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .title-hero {
+    font-size: 20px;
+  }
+
+  .image-damas {
+    max-width: 220px;
+    height: 280px;
+  }
+
+  .title-skills,
+  .title-project,
+  #pricing h2,
+  .h-about,
+  .h-contact {
+    font-size: 24px;
+  }
+
+  .go-todo {
+    font-size: 20px;
+  }
+}

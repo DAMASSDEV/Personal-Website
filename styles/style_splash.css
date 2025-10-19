@@ -1,0 +1,238 @@
+body {
+  margin: 0;
+  padding: 20px;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #5bbcff, #8ccaf7);
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 50px;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3);
+  letter-spacing: 2px;
+  color: #fff6e9;
+  font-weight: 700;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.set {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+.drum {
+  width: 140px;
+  height: 140px;
+  border-radius: 20px;
+  border: 4px solid #000;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #000;
+  background-color: #fff6e9;
+  box-shadow: 8px 8px 0 #000;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.drum:hover {
+  transform: translateY(-5px);
+  box-shadow: 10px 10px 0 #000;
+  background-color: #ce734c;
+}
+
+.drum:active,
+.pressed {
+  transform: translateY(2px);
+  box-shadow: 4px 4px 0 #000;
+}
+
+.w {
+  background-image: url("../Assets/images/tom1.png");
+  background-size: cover;
+}
+.a {
+  background-image: url("../Assets/images/tom2.png");
+  background-size: cover;
+}
+.s {
+  background-image: url("../Assets/images/tom3.png");
+  background-size: cover;
+}
+.d {
+  background-image: url("../Assets/images/tom4.png");
+  background-size: cover;
+}
+.j {
+  background-image: url("../Assets/images/kick.png");
+  background-size: cover;
+}
+.k {
+  background-image: url("../Assets/images/snare.png");
+  background-size: cover;
+}
+.l {
+  background-image: url("../Assets/images/crash.png");
+  background-size: cover;
+}
+
+button {
+  background-color: #ce734c;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  padding: 15px 35px;
+  border: 4px solid #000;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-bottom: 50px;
+  transition: all 0.3s ease;
+  box-shadow: 6px 6px 0 #000;
+}
+
+button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 8px 8px 0 #000;
+  background-color: #5bbcff;
+}
+
+button:active {
+  transform: translateY(1px);
+  box-shadow: 3px 3px 0 #000;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+  }
+
+  .set {
+    gap: 20px;
+  }
+
+  .drum {
+    width: 110px;
+    height: 110px;
+    font-size: 2rem;
+    box-shadow: 6px 6px 0 #000;
+  }
+
+  .drum:hover {
+    box-shadow: 7px 7px 0 #000;
+  }
+
+  button {
+    font-size: 1.3rem;
+    padding: 12px 28px;
+    margin-bottom: 30px;
+  }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+  }
+
+  .set {
+    gap: 15px;
+    padding: 0 5px;
+  }
+
+  .drum {
+    width: 85px;
+    height: 85px;
+    font-size: 1.5rem;
+    border: 3px solid #000;
+    box-shadow: 5px 5px 0 #000;
+    border-radius: 15px;
+  }
+
+  .drum:hover {
+    transform: translateY(-3px);
+    box-shadow: 6px 6px 0 #000;
+  }
+
+  .drum:active,
+  .pressed {
+    transform: translateY(1px);
+    box-shadow: 3px 3px 0 #000;
+  }
+
+  button {
+    font-size: 1.1rem;
+    padding: 10px 25px;
+    margin-bottom: 20px;
+    border: 3px solid #000;
+    box-shadow: 4px 4px 0 #000;
+  }
+
+  button:hover {
+    box-shadow: 5px 5px 0 #000;
+  }
+
+  button:active {
+    box-shadow: 2px 2px 0 #000;
+  }
+}
+
+/* Extra small mobile breakpoint */
+@media (max-width: 360px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .set {
+    gap: 12px;
+  }
+
+  .drum {
+    width: 75px;
+    height: 75px;
+    font-size: 1.3rem;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 8px 20px;
+  }
+}
